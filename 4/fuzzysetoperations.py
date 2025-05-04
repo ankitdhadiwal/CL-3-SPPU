@@ -33,7 +33,29 @@ def max_min_composition(R1, R2):
             result[(x, z)] = max(mins) if mins else 0
     return result
 
-# ---------- Example Fuzzy Sets ----------
+# # ---------- Example Fuzzy Sets ----------
+
+
+# def input_fuzzy_set(set_name):
+#     fuzzy_set = {}
+#     n = int(input(f"Enter number of elements in fuzzy set {set_name}: "))
+#     for i in range(n):
+#         key = input(f"Enter label for element {i+1} of {set_name} (e.g., x1): ")
+#         while True:
+#             try:
+#                 value = float(input(f"Enter membership value for {key} (between 0 and 1): "))
+#                 if 0 <= value <= 1:
+#                     break
+#                 else:
+#                     print("Value must be between 0 and 1.")
+#             except ValueError:
+#                 print("Invalid input. Please enter a numeric value.")
+#         fuzzy_set[key] = value
+#     return fuzzy_set
+
+# A = input_fuzzy_set("A")
+# B = input_fuzzy_set("B")
+
 
 A = {'x1': 0.2, 'x2': 0.7, 'x3': 1.0}
 B = {'x1': 0.6, 'x2': 0.4, 'x3': 0.9}
@@ -70,3 +92,5 @@ composed = max_min_composition(R1, R2)
 print("\n--- Max-Min Composition of R1 and R2 ---")
 for key, val in composed.items():
     print(f"{key}: {val}")
+
+
